@@ -1,0 +1,26 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<div class="neos-content neos-container-fluid">
+    <table class="neos-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content repository path</th>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <f:for each="{archivedNodes}" as="node">
+                <tr>
+                    <td>{node.properties.title}</td>
+                    <td>{node.path}</td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:link.action action="unarchive" arguments="{node: node.path}" class="neos-button neos-button-primary">Unarchive</f:link.action>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+{
+    "name": "futjikato/pagearchive",
+    "description": "Highly experimental neos package providing an archive to clean up your page tree in the backend.",
+    "type": "neos-package",
+    "require": {
+        "typo3/flow": "*",
+        "typo3/neos": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Futjikato\\PageArchive": "Classes/"
+        }
+    },
+    "extra": {
+        "marketplace-account": "m.spindelhirn@cashiers-check.de",
+        "neos": {
+            "package-key": "Futjikato.PageArchive"
+        }
+    }
+}

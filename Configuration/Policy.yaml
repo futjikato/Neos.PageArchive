@@ -1,0 +1,16 @@
+privilegeTargets:
+  'Futjikato\PageArchive\Security\Authorization\Privilege\ArchiveNodeTreePrivilege':
+    'Futjikato.PageArchive:Archived':
+      matcher: 'TRUE'
+
+  'TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'Futjikato.PageArchive:BackendModule':
+      matcher: 'method(Futjikato\PageArchive\Controller\BackendController->.*Action())'
+
+roles:
+
+  'TYPO3.Neos:Editor':
+    privileges:
+      -
+        privilegeTarget: 'Futjikato.PageArchive:BackendModule'
+        permission: GRANT

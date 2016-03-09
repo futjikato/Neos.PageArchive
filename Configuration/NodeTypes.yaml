@@ -1,0 +1,14 @@
+'Futjikato.PageArchive:ArchivableMixin':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        archive:
+          label: i18n
+  properties:
+    pageArchive:
+      type: 'boolean'
+      ui:
+        label: i18n
+        inspector:
+          group: archive

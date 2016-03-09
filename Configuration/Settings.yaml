@@ -1,0 +1,11 @@
+TYPO3:
+  Neos:
+    modules:
+      management:
+        submodules:
+          pageArchiveModule:
+            label: 'Page archive'
+            controller: 'Futjikato\PageArchive\Controller\BackendController'
+            description: 'Page archive to list and unarchive pages'
+            icon: 'icon-star'
+            privilegeTarget: 'Futjikato.PageArchive:BackendModule'
