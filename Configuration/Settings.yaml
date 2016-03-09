@@ -1,5 +1,9 @@
 TYPO3:
   Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          'Futjikato.PageArchive': ['NodeTypes/*']
     modules:
       management:
         submodules:
@@ -7,5 +11,5 @@ TYPO3:
             label: 'Page archive'
             controller: 'Futjikato\PageArchive\Controller\BackendController'
             description: 'Page archive to list and unarchive pages'
-            icon: 'icon-star'
+            icon: 'icon-archive'
             privilegeTarget: 'Futjikato.PageArchive:BackendModule'
