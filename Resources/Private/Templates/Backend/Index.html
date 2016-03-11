@@ -10,13 +10,13 @@
             </tr>
         </thead>
         <tbody>
-            <f:for each="{archivedNodes}" as="node">
+            <f:for each="{frozenNodes}" as="node">
                 <tr>
                     <td>{node.properties.title}</td>
                     <td>{node.path}</td>
                     <td class="neos-action">
                         <div class="neos-pull-right">
-                            <f:link.action action="unarchive" arguments="{node: node.path}" class="neos-button neos-button-primary">Unarchive</f:link.action>
+                            <f:link.action action="unfreeze" arguments="{node: node.path}" class="neos-button neos-button-primary">Unfreeze</f:link.action>
                         </div>
                     </td>
                 </tr>

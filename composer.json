@@ -1,6 +1,6 @@
 {
-    "name": "futjikato/pagearchive",
-    "description": "Highly experimental neos package providing an archive to clean up your page tree in the backend.",
+    "name": "futjikato/pagefreeze",
+    "description": "Highly experimental neos package providing option to freeze pages to hide them in your tree in the backend.",
     "type": "neos-package",
     "require": {
         "typo3/flow": "*",
@@ -8,13 +8,13 @@
     },
     "autoload": {
         "psr-0": {
-            "Futjikato\\PageArchive": "Classes/"
+            "Futjikato\\PageFreeze": "Classes/"
         }
     },
     "extra": {
         "marketplace-account": "m.spindelhirn@cashiers-check.de",
         "neos": {
-            "package-key": "Futjikato.PageArchive"
+            "package-key": "Futjikato.PageFreeze"
         }
     }
 }

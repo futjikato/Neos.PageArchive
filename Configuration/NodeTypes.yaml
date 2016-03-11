@@ -1,14 +1,14 @@
-'Futjikato.PageArchive:ArchivableMixin':
+'Futjikato.PageFreeze:FreezableMixin':
   abstract: TRUE
   ui:
     inspector:
       groups:
-        archive:
+        freezer:
           label: i18n
   properties:
-    pageArchive:
+    pageFreeze:
       type: 'boolean'
       ui:
         label: i18n
         inspector:
-          group: archive
+          group: freezer

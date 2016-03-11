@@ -3,13 +3,13 @@ TYPO3:
     userInterface:
       translation:
         autoInclude:
-          'Futjikato.PageArchive': ['NodeTypes/*']
+          'Futjikato.PageFreeze': ['NodeTypes/*']
     modules:
       management:
         submodules:
-          pageArchiveModule:
-            label: 'Page archive'
-            controller: 'Futjikato\PageArchive\Controller\BackendController'
+          pageFreezeModule:
+            label: 'Page freezer'
+            controller: 'Futjikato\PageFreeze\Controller\BackendController'
             description: 'Page archive to list and unarchive pages'
             icon: 'icon-archive'
-            privilegeTarget: 'Futjikato.PageArchive:BackendModule'
+            privilegeTarget: 'Futjikato.PageFreeze:BackendModule'

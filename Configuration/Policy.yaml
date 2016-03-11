@@ -1,16 +1,16 @@
 privilegeTargets:
-  'Futjikato\PageArchive\Security\Authorization\Privilege\ArchiveNodeTreePrivilege':
-    'Futjikato.PageArchive:Archived':
+  'Futjikato\PageFreeze\Security\Authorization\Privilege\FreezeNodeTreePrivilege':
+    'Futjikato.PageFreeze:Archived':
       matcher: 'TRUE'
 
   'TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
-    'Futjikato.PageArchive:BackendModule':
-      matcher: 'method(Futjikato\PageArchive\Controller\BackendController->.*Action())'
+    'Futjikato.PageFreeze:BackendModule':
+      matcher: 'method(Futjikato\PageFreeze\Controller\BackendController->.*Action())'
 
 roles:
 
   'TYPO3.Neos:Editor':
     privileges:
       -
-        privilegeTarget: 'Futjikato.PageArchive:BackendModule'
+        privilegeTarget: 'Futjikato.PageFreeze:BackendModule'
         permission: GRANT

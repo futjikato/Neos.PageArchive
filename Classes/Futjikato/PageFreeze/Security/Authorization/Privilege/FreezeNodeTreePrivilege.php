@@ -1,6 +1,6 @@
 <?php
 
-namespace Futjikato\PageArchive\Security\Authorization\Privilege;
+namespace Futjikato\PageFreeze\Security\Authorization\Privilege;
 
 use TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilegeSubject;
 use TYPO3\Flow\Security\Authorization\Privilege\PrivilegeSubjectInterface;
@@ -11,7 +11,7 @@ use TYPO3\TYPO3CR\Security\Authorization\Privilege\Node\NodePrivilegeSubject;
 /**
  * Privilege to match archived page nodes
  */
-class ArchiveNodeTreePrivilege extends NodeTreePrivilege
+class FreezeNodeTreePrivilege extends NodeTreePrivilege
 {
     /**
      * Matches only archived page nodes.
@@ -38,8 +38,8 @@ class ArchiveNodeTreePrivilege extends NodeTreePrivilege
 
         // FIXME: move to custom Context
         $node = $subject->getNode();
-        if ($node->hasProperty('pageArchive')) {
-            return $node->getProperty('pageArchive');
+        if ($node->hasProperty('pageFreeze')) {
+            return $node->getProperty('pageFreeze');
         }
 
         return false;

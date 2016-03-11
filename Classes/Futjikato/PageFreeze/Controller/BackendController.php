@@ -1,6 +1,6 @@
 <?php
 
-namespace Futjikato\PageArchive\Controller;
+namespace Futjikato\PageFreeze\Controller;
 
 use TYPO3\Eel\FlowQuery\FlowQuery;
 use TYPO3\Flow\Annotations as Flow;
@@ -41,11 +41,11 @@ class BackendController extends \TYPO3\Flow\Mvc\Controller\ActionController
         $root = $ctx->getRootNode();
 
         $flowQuery = new FlowQuery(array($root));
-        $flowQuery = $flowQuery->find('[instanceof Futjikato.PageArchive:ArchivableMixin][pageArchive = TRUE]');
+        $flowQuery = $flowQuery->find('[instanceof Futjikato.PageFreeze:FreezableMixin][pageFreeze = TRUE]');
         $nodes = $flowQuery->get();
 
         $this->view->assign('siteNode', $root);
-        $this->view->assign('archivedNodes', $nodes);
+        $this->view->assign('frozenNodes', $nodes);
     }
 
     /**
@@ -53,16 +53,16 @@ class BackendController extends \TYPO3\Flow\Mvc\Controller\ActionController
      *
      * @return void
      */
-    public function unarchiveAction(NodeInterface $node)
+    public function unfreezeAction(NodeInterface $node)
     {
-        if (!$node->hasProperty('pageArchive')) {
+        if (!$node->hasProperty('pageFreeze')) {
             $this->addFlashMessage('Unable to perform action. Invalid node.', '', Message::SEVERITY_ERROR);
             $this->redirect('index');
         }
 
         $persistenceManager = $this->persistenceManager;
         $this->securityContext->withoutAuthorizationChecks(function() use ($node, $persistenceManager) {
-            $node->setProperty('pageArchive', false);
+            $node->setProperty('pageFreeze', false);
             $persistenceManager->persistAll();
         });
 
